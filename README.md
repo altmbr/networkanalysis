@@ -34,17 +34,17 @@ Before setting up the project, ensure you have the following:
 
 3. **Google Calendar Scraping Setup**
 
-  a. **Create a Google Cloud Project**
+	a. **Create a Google Cloud Project**
 
-  1.	Navigate to the Google Cloud Console.
-	2.	Click on Select a project and then New Project.
+	1.	Navigate to the Google Cloud Console.
+	2.	Click on Select a project and then New Project
 	3.	Enter a project name and click Create.
 	4.	Once the project is created, go to APIs & Services > Library.
 	5.	Search for Google Calendar API and click Enable.
 
-  b. **Create OAuth 2.0 Credentials**
+	b. **Create OAuth 2.0 Credentials**
 
-  1.	In the APIs & Services section, navigate to Credentials.
+  	1.	In the APIs & Services section, navigate to Credentials.
 	2.	Click Create Credentials > OAuth client ID.
 	3.	If prompted, configure the OAuth consent screen by providing the necessary details.
 	4.	Select Desktop App as the application type and click Create.
@@ -60,27 +60,27 @@ Run the fetch_calendar_events.py script to scrape your Google Calendar events.
 
 Steps:
 
-•	Date Range Configuration: By default, the script is set to scrape events from 2010-12-01 to 2025-01-05. Modify the start_date_str and end_date_str variables in the script as needed.
-•	Authentication: The first time you run the script, a browser window will prompt you to authorize access to your Google Calendar. This will generate a token.json file for future authentications.
-•	Output: The script generates a calendar_events.csv file containing details of your calendar events.
+• Date Range Configuration: By default, the script is set to scrape events from 2010-12-01 to 2025-01-05. Modify the start_date_str and end_date_str variables in the script as needed.
+• Authentication: The first time you run the script, a browser window will prompt you to authorize access to your Google Calendar. This will generate a token.json file for future authentications.
+• Output: The script generates a calendar_events.csv file containing details of your calendar events.
 
 ## Extract Names, Company, # of Meetings
 
 1. **OpenAI Integration**
 
-  a. **Obtain Your OpenAI API Key**
+	a. **Obtain Your OpenAI API Key**
 
-  •	Sign up or log in to your [OpenAI account], (https://platform.openai.com/signup/).
-	•	Navigate to the API section and generate a new API key.
+		• Sign up or log in to your [OpenAI account], (https://platform.openai.com/signup/).
+		• Navigate to the API section and generate a new API key.
 
-  b. **Configure Environment Variables**
+	b. **Configure Environment Variables**
 
-  •	Create a .env file in the project root directory.
-	•	Add your OpenAI API key to the .env file:
+		• Create a .env file in the project root directory.
+		• Add your OpenAI API key to the .env file:
 
-    ```
+    	```
 
-    OPENAI_API_KEY="your-openai-api-key-here"
+    	OPENAI_API_KEY="your-openai-api-key-here"
  
 2. Configure Internal Emails
 
@@ -104,9 +104,9 @@ Run the extract_external_attendees.py script to process the scraped calendar eve
 
 Steps:
 
-•	Environment Variables: Ensure your .env file contains the correct OPENAI_API_KEY.
-•	Processing: The script reads from calendar_events.csv, filters out internal emails, and uses GPT-4 to extract names and company information.
-•	Output: The script generates an external_attendees.csv file with enriched attendee details.
+• Environment Variables: Ensure your .env file contains the correct OPENAI_API_KEY.
+• Processing: The script reads from calendar_events.csv, filters out internal emails, and uses GPT-4 to extract names and company information.
+• Output: The script generates an external_attendees.csv file with enriched attendee details.
 
  
     
