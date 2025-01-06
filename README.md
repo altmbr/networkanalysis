@@ -23,7 +23,7 @@ Before setting up the project, ensure you have the following:
 
 1. **Clone the Repository**
 
-   ```bash
+   ```
    git clone https://github.com/yourusername/calendar-conversation-tracker.git
    cd calendar-conversation-tracker
 
@@ -54,7 +54,7 @@ Before setting up the project, ensure you have the following:
 
 Run the fetch_calendar_events.py script to scrape your Google Calendar events.
 
-    ```bash
+    ```
 
     python fetch_calendar_events.py
 
@@ -78,7 +78,7 @@ Steps:
   •	Create a .env file in the project root directory.
 	•	Add your OpenAI API key to the .env file:
 
-    ```bash
+    ```
 
     OPENAI_API_KEY="your-openai-api-key-here"
  
@@ -86,7 +86,7 @@ Steps:
 
 In the extract_external_attendees.py script, there’s a set of internal emails used to filter out your own or internal contacts. Update this list to include any additional internal emails you want to exclude.
 
-    ```bash
+    ```
 
     internal_emails = {
     "your.email@example.com",
@@ -98,7 +98,7 @@ In the extract_external_attendees.py script, there’s a set of internal emails 
 
 Run the extract_external_attendees.py script to process the scraped calendar events and extract external attendee information.
 
-    ```bash
+    ```
 
     python extract_external_attendees.py
 
