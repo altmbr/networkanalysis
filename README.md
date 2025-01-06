@@ -19,7 +19,7 @@ Before setting up the project, ensure you have the following:
 - **Google Cloud Platform (GCP) Account**: To access Google Calendar API.
 - **OpenAI API Key**: For processing attendee information with GPT-4.
 
-## Installation
+## Scrape GCal Meetings Data
 
 1. **Clone the Repository**
 
@@ -64,7 +64,9 @@ Steps:
 •	Authentication: The first time you run the script, a browser window will prompt you to authorize access to your Google Calendar. This will generate a token.json file for future authentications.
 •	Output: The script generates a calendar_events.csv file containing details of your calendar events.
 
-5. **OpenAI Integration**
+## Extract Names, Company, # of Meetings
+
+1. **OpenAI Integration**
 
   a. **Obtain Your OpenAI API Key**
 
@@ -80,7 +82,7 @@ Steps:
 
     OPENAI_API_KEY="your-openai-api-key-here"
  
-6. Configure Internal Emails
+2. Configure Internal Emails
 
 In the extract_external_attendees.py script, there’s a set of internal emails used to filter out your own or internal contacts. Update this list to include any additional internal emails you want to exclude.
 
@@ -92,7 +94,7 @@ In the extract_external_attendees.py script, there’s a set of internal emails 
     # Add more internal emails as needed
     }
 
-7. Extract External Attendees
+3. Extract External Attendees
 
 Run the extract_external_attendees.py script to process the scraped calendar events and extract external attendee information.
 
