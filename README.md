@@ -54,7 +54,6 @@ Before setting up the project, ensure you have the following:
 
 	Run the fetch_calendar_events.py script to scrape your Google Calendar events.
 
-		```bash
 		python fetch_calendar_events.py
 
 	Steps:
@@ -69,29 +68,25 @@ Before setting up the project, ensure you have the following:
 
 	a. **Obtain Your OpenAI API Key**
 
-		• Sign up or log in to your [OpenAI account], (https://platform.openai.com/signup/).
-		• Navigate to the API section and generate a new API key.
+	• Sign up or log in to your [OpenAI account](https://platform.openai.com/signup/).
+	• Navigate to the API section and generate a new API key.
 
 	b. **Configure Environment Variables**
 
-		• Create a .env file in the project root directory.
-		• Add your OpenAI API key to the .env file:
+	• Create a .env file in the project root directory.
+	• Add your OpenAI API key to the .env file:
 
-    	```
-
-    	OPENAI_API_KEY="your-openai-api-key-here"
+    		OPENAI_API_KEY="your-openai-api-key-here"
  
 2. Configure Internal Emails
 
-	In the extract_external_attendees.py script, there’s a set of internal emails used to filter out your own or internal contacts. Update this list 	to include any additional internal emails you want to exclude.
+	In the extract_external_attendees.py script, there’s a set of internal emails used to filter out your own or internal contacts. Update this list to include any additional internal emails you want to exclude.
 
 4. Extract External Attendees
 
 	Run the extract_external_attendees.py script to process the scraped calendar events and extract external attendee information.
 
-	    ```
-	
-	    python extract_external_attendees.py
+		python extract_external_attendees.py
 
 	Steps:
 
