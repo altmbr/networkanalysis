@@ -84,29 +84,21 @@ Steps:
  
 2. Configure Internal Emails
 
-In the extract_external_attendees.py script, there’s a set of internal emails used to filter out your own or internal contacts. Update this list to include any additional internal emails you want to exclude.
+	In the extract_external_attendees.py script, there’s a set of internal emails used to filter out your own or internal contacts. Update this list 	to include any additional internal emails you want to exclude.
 
-    ```
+4. Extract External Attendees
 
-    internal_emails = {
-    "your.email@example.com",
-    "another.internal@example.com",
-    # Add more internal emails as needed
-    }
+	Run the extract_external_attendees.py script to process the scraped calendar events and extract external attendee information.
 
-3. Extract External Attendees
+	    ```
+	
+	    python extract_external_attendees.py
 
-Run the extract_external_attendees.py script to process the scraped calendar events and extract external attendee information.
+	Steps:
 
-    ```
-
-    python extract_external_attendees.py
-
-Steps:
-
-• Environment Variables: Ensure your .env file contains the correct OPENAI_API_KEY.
-• Processing: The script reads from calendar_events.csv, filters out internal emails, and uses GPT-4 to extract names and company information.
-• Output: The script generates an external_attendees.csv file with enriched attendee details.
+	• Environment Variables: Ensure your .env file contains the correct OPENAI_API_KEY.
+	• Processing: The script reads from calendar_events.csv, filters out internal emails, and uses GPT-4 to extract names and company information.
+	• Output: The script generates an external_attendees.csv file with enriched attendee details.
 
  
     
