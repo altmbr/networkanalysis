@@ -52,17 +52,17 @@ Before setting up the project, ensure you have the following:
 
 4. Fetch Calendar Events
 
-Run the fetch_calendar_events.py script to scrape your Google Calendar events.
+	Run the fetch_calendar_events.py script to scrape your Google Calendar events.
 
-    ```
+	    ```
+	
+	    python fetch_calendar_events.py
 
-    python fetch_calendar_events.py
-
-Steps:
-
-• Date Range Configuration: By default, the script is set to scrape events from 2010-12-01 to 2025-01-05. Modify the start_date_str and end_date_str variables in the script as needed.
-• Authentication: The first time you run the script, a browser window will prompt you to authorize access to your Google Calendar. This will generate a token.json file for future authentications.
-• Output: The script generates a calendar_events.csv file containing details of your calendar events.
+	Steps:
+	
+	• Date Range Configuration: By default, the script is set to scrape events from 2010-12-01 to 2025-01-05. Modify the start_date_str and 		end_date_str variables in the script as needed.
+	• Authentication: The first time you run the script, a browser window will prompt you to authorize access to your Google Calendar. This will 		generate a token.json file for future authentications.
+	• Output: The script generates a calendar_events.csv file containing details of your calendar events.
 
 ## Extract Names, Company, # of Meetings
 
