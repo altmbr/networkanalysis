@@ -36,7 +36,7 @@ Before setting up the project, ensure you have the following:
 
 	a. **Create a Google Cloud Project**
 
-	1.	Navigate to the [Google Cloud Console] (https://console.cloud.google.com/).
+	1.	Navigate to the [Google Cloud Console](https://console.cloud.google.com/).
 	2.	Click on Select a project and then New Project
 	3.	Enter a project name and click Create.
 	4.	Once the project is created, go to APIs & Services > Library.
