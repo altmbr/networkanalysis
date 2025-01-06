@@ -23,16 +23,16 @@ Before setting up the project, ensure you have the following:
 
 1. **Clone the Repository**
 
-   ```
-   git clone https://github.com/yourusername/calendar-conversation-tracker.git
-   cd calendar-conversation-tracker
+	```bash
+ 	git clone https://github.com/yourusername/calendar-conversation-tracker.git
+ 	cd calendar-conversation-tracker
 
-2. **Install Required Python Libraries**
+3. **Install Required Python Libraries**
 
-    ```bash
-    pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client openai python-dotenv
+	```bash
+	pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client openai 	python-dotenv
 
-3. **Google Calendar Scraping Setup**
+6. **Google Calendar Scraping Setup**
 
 	a. **Create a Google Cloud Project**
 
@@ -50,18 +50,17 @@ Before setting up the project, ensure you have the following:
 	4.	Select Desktop App as the application type and click Create.
 	5.	Download the credentials.json file and place it in the project root directory.
 
-4. Fetch Calendar Events
+7. Fetch Calendar Events
 
 	Run the fetch_calendar_events.py script to scrape your Google Calendar events.
 
-	    ```
-	
-	    python fetch_calendar_events.py
+		```bash
+		python fetch_calendar_events.py
 
 	Steps:
 	
-	• Date Range Configuration: By default, the script is set to scrape events from 2010-12-01 to 2025-01-05. Modify the start_date_str and 		end_date_str variables in the script as needed.
-	• Authentication: The first time you run the script, a browser window will prompt you to authorize access to your Google Calendar. This will 		generate a token.json file for future authentications.
+ 	• Date Range Configuration: By default, the script is set to scrape events from 2010-12-01 to 2025-01-05. Modify the start_date_str and end_date_str variables in the script as needed.
+	• Authentication: The first time you run the script, a browser window will prompt you to authorize access to your Google Calendar. This will generate a token.json file for future authentications.
 	• Output: The script generates a calendar_events.csv file containing details of your calendar events.
 
 ## Extract Names, Company, # of Meetings
